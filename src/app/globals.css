@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* C&B brand palette */
+:root {
+  --amber: #f2ac3c;        /* Sunrise Amber – primary actions, highlights */
+  --gold: #f8d65a;         /* Golden Hour – secondary highlight */
+  --paper: #faf8f3;        /* Starry White – page background */
+  --grey: #646767;         /* Cloudy Grey – secondary text */
+  --ink: #111111;          /* Midnight Ash – primary text, dark surfaces */
+  --line: #e7e3d8;         /* hairlines on paper */
+  --card: #ffffff;
+  --amber-soft: #fdf1dc;
+  --ok: #2f7d4f;
+  --ok-soft: #e4f2e9;
+  --warn: #b4531a;
+  --warn-soft: #fbe9dc;
+}
+
+@theme inline {
+  --color-amber: var(--amber);
+  --color-gold: var(--gold);
+  --color-paper: var(--paper);
+  --color-grey: var(--grey);
+  --color-ink: var(--ink);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-amber-soft: var(--amber-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --font-sans: "General Sans", ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
+  --font-display: "Urbanist", ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
